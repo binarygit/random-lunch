@@ -28,6 +28,6 @@ class EmployeeSignupTest < ActionDispatch::IntegrationTest
     assert_response :redirect
     follow_redirect!
     assert_template 'static_pages/home'
-    assert flash[:notice]
+    assert flash[:success]
   end
 end

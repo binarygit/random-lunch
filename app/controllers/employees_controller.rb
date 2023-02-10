@@ -7,7 +7,8 @@ class EmployeesController < ApplicationController
     @employee = Employee.new(employee_params)
     if @employee.save
       #TODO send email confirmation
-      redirect_to root_url, notice: "Please check your email to confirm your account."
+      flash[:success] = "Please check your email to confirm your account."
+      redirect_to root_url
     else
       render :new, status: :unprocessable_entity
     end
