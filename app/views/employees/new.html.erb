@@ -2,6 +2,7 @@
   <h1>Create Account</h1>
   <div class="form-group col-6">
     <%= form_with model: @employee do |f| %>
+      <%= render 'shared/error_messages' %>
       <div class='padding-small'>
         <%= f.label :first_name %>
         <%= f.text_field :first_name %>
@@ -19,7 +20,7 @@
         <%= f.email_field :email, required: true %>
       </div>
       <div class="padding-small">
-        <%= f.submit "Create Account" %>
+        <%= f.submit "Create Account", data: { "disable-with": "Submitting..." } %>
       </div>
     <% end %>
   </div>

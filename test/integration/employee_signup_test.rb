@@ -10,5 +10,6 @@ class EmployeeSignupTest < ActionDispatch::IntegrationTest
     end
     assert_response :unprocessable_entity
     assert_template 'employees/new'
+    assert_select '#error_explanation'
   end
 end
