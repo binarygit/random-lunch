@@ -2,7 +2,7 @@ require "test_helper"
 
 class EmployeeTest < ActiveSupport::TestCase
   def setup
-    @employee = Employee.new(email: "ava@ava.com", username: "ava")
+    @employee = Employee.new(email: "ava@ava.com", username: "ava", password: 'foobarfoobar', password_confirmation: 'foobarfoobar')
   end
 
   test 'should be valid' do

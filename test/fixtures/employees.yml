@@ -6,3 +6,4 @@ avi:
   username: 'avi'
   bio: ''
   email: 'avi@avi.com'
+  password_digest: <%= BCrypt::Password.create("foobarfoobar") %>
