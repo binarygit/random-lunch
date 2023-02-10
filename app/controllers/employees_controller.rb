@@ -9,7 +9,7 @@ class EmployeesController < ApplicationController
       #TODO send email confirmation
       redirect_to root_url, notice: "Please check your email to confirm your account."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
