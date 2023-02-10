@@ -12,28 +12,27 @@
         <%= f.text_field :last_name %>
       </div>
       <div class='padding-small'>
-        <%= f.label :username %>
+        <%= f.label :username %><sup class="required">*</sup>
         <%= f.text_field :username, required: true %>
       </div>
       <div class='padding-small'>
-        <%= f.label :email %>
+        <%= f.label :email %><sup class="required">*</sup>
         <%= f.email_field :email, required: true %>
       </div>
       <div class='padding-small'>
-        <%= f.label :password %>
+        <%= f.label :password %><sup class="required">*</sup>
         <%= f.password_field :password, required: true %>
       </div>
       <div class='padding-small'>
-        <%= f.label :password_confirmation %>
+        <%= f.label :password_confirmation %><sup class="required">*</sup>
         <%= f.password_field :password_confirmation, required: true %>
       </div>
-      <div class="padding-small">
-        <%= f.submit "Create Account", data: { "disable-with": "Submitting..." } %>
+      <div class="padding-small center">
+        <%= f.submit "Create Account", class: "paper-btn btn-success", data: { "disable-with": "submitting..." } %>
       </div>
     <% end %>
   </div>
   <div class="info col-6">
-    <p>Rant</p>
     <%= image_tag 'uncle_sam.jpeg' %>
   </div>
 </div>

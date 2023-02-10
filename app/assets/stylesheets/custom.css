@@ -9,3 +9,7 @@ body {
 .important {
   font-size: 30px;
 }
+
+.required {
+  color: red;
+}
