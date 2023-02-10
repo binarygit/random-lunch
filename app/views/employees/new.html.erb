@@ -1,2 +1,30 @@
-<h1>Employees#new</h1>
-<p>Find me in app/views/employees/new.html.erb</p>
+<div class="container paper row">
+  <h1>Create Account</h1>
+  <div class="form-group col-6">
+    <%= form_with model: @employee do |f| %>
+      <div class='padding-small'>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </div>
+      <div class='padding-small'>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </div>
+      <div class='padding-small'>
+        <%= f.label :username %>
+        <%= f.text_field :username, required: true %>
+      </div>
+      <div class='padding-small'>
+        <%= f.label :email %>
+        <%= f.email_field :email, required: true %>
+      </div>
+      <div class="padding-small">
+        <%= f.submit "Create Account" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="info col-6">
+    <p>Rant</p>
+    <%= image_tag 'uncle_sam.jpeg' %>
+  </div>
+</div>
