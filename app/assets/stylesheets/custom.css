@@ -1,0 +1,11 @@
+body {
+  background-image: url('background.png')
+}
+
+.first-line:first-letter {
+  font-size: 42px;
+}
+
+.important {
+  font-size: 30px;
+}

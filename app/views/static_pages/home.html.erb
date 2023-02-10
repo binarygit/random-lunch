@@ -1,5 +1,21 @@
 <div class="paper container">
-  <h1>StaticPages#home</h1>
-  <p>Find me in app/views/static_pages/home.html.erb</p>
-  <button>hello</button>
+  <h1>
+    Welcome to <br>
+    <%= link_to 'Random Lunch', root_path, class: 'background-secondary' %>
+  </h1>
+  <p class="first-line">This is a frustrating app. It's frustrating because <span class="border-bottom border-danger">it is born out of frustration.<span></p>
+  <p>Do you remember what we were promised? 
+  <ul>
+    <li>A fantastic tour 🏄‍♀️</li>
+    <li>Company sponsored lunches 🍜</li>
+    <li>Weekend parties 🍻</li>
+  </ul>
+  and more...
+  </p>
+  <p>Beautiful dreams served in a tinfoil rectangular utensil that on a good Friday can only hold 6 momos and 1 black grape 🍇<br>...is that all we can eat?</p>
+  <p>"Ofcourse not!", says Sagar Koirala 🎂</p>
+  <hr>
+  <p>So, I built this app for us!</p>
+  <p class="background-success important">It takes all the employees in Danphe, and once every 2 months groups people randomly into groups of three and chooses a resturant for them to go out and happily eat their delicious lunch!</p>
+  <p>It already has the finest places in the Valley in it's database. Just go ahead and <%= link_to 'Sign up', signup_path, class: 'paper-btn btn-primary-outline' %></p>
 </div>
