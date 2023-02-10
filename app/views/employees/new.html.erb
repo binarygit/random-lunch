@@ -19,6 +19,14 @@
         <%= f.label :email %>
         <%= f.email_field :email, required: true %>
       </div>
+      <div class='padding-small'>
+        <%= f.label :password %>
+        <%= f.password_field :password, required: true %>
+      </div>
+      <div class='padding-small'>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, required: true %>
+      </div>
       <div class="padding-small">
         <%= f.submit "Create Account", data: { "disable-with": "Submitting..." } %>
       </div>
