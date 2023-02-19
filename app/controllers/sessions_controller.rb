@@ -13,4 +13,10 @@ class SessionsController < ApplicationController
       render :new, status: :unauthorized
     end
   end
+
+  def destroy
+    session[:employee_id] = nil
+    flash[:success] = "Successfully logged out!"
+    redirect_to root_path
+  end
 end

@@ -9,7 +9,7 @@ class NavBarComponent < ViewComponent::Base
 
   def login_or_logout_link
     if @logged_in
-      tag.a "Logout", href: logout_path, class: "paper-btn btn-danger-outline"
+      button_to "Logout", logout_path, id: 'logout', class: "paper-btn btn-danger-outline", method: 'delete'
     else
       tag.a "Login", href: login_path, class: "paper-btn btn-secondary-outline"
     end

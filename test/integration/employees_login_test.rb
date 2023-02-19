@@ -18,6 +18,13 @@ class EmployeesLoginTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert flash[:success]
     assert_template 'employees/show'
+    # logout
+    delete logout_path
+    assert_response :redirect
+    follow_redirect!
+    assert_template 'static_pages/home'
+    assert_not session[:employee_id]
+    assert flash[:success]
   end
 
   test 'login with invalid credentials' do

@@ -1,6 +1,10 @@
 require "application_system_test_case"
 
 class EmployeesTest < ApplicationSystemTestCase
+  def setup
+    @avi = employees(:avi)
+  end
+
   test 'new employee signs up' do
     visit signup_url
     fill_in "Username", with: "Bobby"
@@ -12,11 +16,23 @@ class EmployeesTest < ApplicationSystemTestCase
   end
 
   test 'employee logs in' do
-    avi = employees(:avi)
+    login_as(@avi)
+    assert_text "Welcome #{@avi.username}"
+  end
+
+  #test 'employee logs out' do
+  #  login_as(@avi)
+  #  # TODO capybara cannot find the logout btn
+  #  find(:xpath, '//*[@id="logout"]').click
+  #  assert_text "Sucessfully logged out!"
+  #end
+
+  private
+
+  def login_as(employee)
     visit login_url
-    fill_in "Email", with: avi.email
+    fill_in "Email", with: employee.email
     fill_in "Password", with: "foobarfoobar"
-    click_on "Login"
-    assert_text "Welcome #{avi.username}"
+    click_on [ "Login", "form button" ]
   end
 end
