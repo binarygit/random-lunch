@@ -1,0 +1,18 @@
+<div class="paper">
+  <h1>Login Form</h1>
+  <div class="form-group col-6">
+    <%= form_with url: '/login' do |f| %>
+      <div class='padding-small'>
+        <%= f.label :email %><sup class="required">*</sup>
+        <%= f.email_field :email, required: true %>
+      </div>
+      <div class='padding-small'>
+        <%= f.label :password %><sup class="required">*</sup>
+        <%= f.password_field :password, required: true %>
+      </div>
+      <div class="padding-small center">
+        <%= f.submit "Login", class: "paper-btn btn-success", data: { "disable-with": "submitting..." } %>
+      </div>
+    <% end %>
+  </div>
+</div>
