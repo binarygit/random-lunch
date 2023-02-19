@@ -1,0 +1,6 @@
+<div class="paper">
+  <h3>Employee details</h3>
+  <% @employee.displayable_attributes.each do |key, value| %>
+    <p><%= "#{key}: #{value}"%></p>
+  <% end %>
+</div>

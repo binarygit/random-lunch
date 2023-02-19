@@ -11,7 +11,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', signup_path
 
     # nav bar
-    #assert_select 'a[href=?]', login_url
+    assert_select 'a[href=?]', login_path
     assert_select 'a[href=?]', root_path
 
     # footer
