@@ -1,9 +1,5 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  lunch_date: 2023-03-20
-  resturant: one
-
-two:
-  lunch_date: 2023-03-20
-  resturant: two
+upcoming_lunch:
+  lunch_date: <%= Date.tomorrow %>
+  resturant: gurkha
