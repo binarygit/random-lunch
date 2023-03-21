@@ -9,4 +9,8 @@ class Lunch < ApplicationRecord
   def today?
     lunch_date == Date.today
   end
+
+  def upcoming?
+    self == Lunch.upcoming
+  end
 end

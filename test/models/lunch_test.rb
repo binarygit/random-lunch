@@ -31,4 +31,9 @@ class LunchTest < ActiveSupport::TestCase
     @lunch.lunch_date = Date.today
     assert @lunch.today?
   end
+
+  test "upcoming? returns whether the lunch is the upcoming lunch" do
+    assert_not @lunch.upcoming?
+    assert lunches(:upcoming_lunch).upcoming?
+  end
 end
