@@ -12,6 +12,13 @@
       </label>
       <div class="collapsible-body">
         <ul class="inline">
+          <% if @logged_in %>
+            <li>
+              <button class="btn-primary btn-block">
+                <%= link_to "Upcoming Lunch", upcoming_lunch_path %>
+              </button>
+            </li>
+          <% end %>
           <li><%= login_or_logout_link %></li>
         </ul>
       </div>

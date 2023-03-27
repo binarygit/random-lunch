@@ -1,0 +1,24 @@
+<main id="no-upcoming-lunch">
+  <div class="row">
+    <div class="col-6 col">
+      <p class="larger-text">
+      Sorry, but it seems that no lunches are scheduled
+      at this time.
+      </p>
+      <p class="larger-text">The next scheduling will take place on: <u class="full-date"><%= LunchesController::SCHEDULING_DATES.strftime('%b, %d, %Y') %></u></p>
+    </div>
+
+    <aside class="col-6 col">
+      <div id="meme-container">
+        <%= image_tag 'akshay_meme' %>
+      </div>
+    </aside>
+  </div>
+  <div class="larger-text row countdown-timer-container" 
+       data-controller="countdown-timer" 
+       data-countdown-timer-upcoming-date-timestamp-value="<%= unix_timestamp_of(LunchesController::SCHEDULING_DATES) %>"
+       data-countdown-timer-tomorrow-date-timestamp-value="<%= unix_timestamp_of(Date.tomorrow) %>">
+    
+       <p id="countdown-timer" class="countdown-timer" data-countdown-timer-target="timerDisplayer"></p>
+  </div>
+</main>
