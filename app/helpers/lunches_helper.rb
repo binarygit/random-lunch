@@ -9,4 +9,14 @@ module LunchesHelper
     # new Date(60)
     date.beginning_of_day.to_i * 1000
   end
+
+  def get_next_scheduling_date
+    Date.new(Date.today.year, next_scheduling_month)
+  end
+
+  private
+
+  def next_scheduling_month
+    LunchesController::SCHEDULING_MONTHS.select {|month| Date.today.month < month}.first
+  end
 end

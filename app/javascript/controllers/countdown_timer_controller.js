@@ -34,7 +34,12 @@ export default class extends Controller {
   }
 
   getDaysBetween(greaterDate, smallerDate) {
-    return Math.round(this.timeLeftInMS(greaterDate, smallerDate) / 86400000);
+    // When I am not substracting by one, before 12pm I am not going to 
+    // get the correct_days_between. 
+    // I am going to get (correct_days_between + 1)
+    // This is because I am rounding up, so
+    // 3.69 is going to be 4.
+    return Math.round(this.timeLeftInMS(greaterDate, smallerDate) / 86400000) - 1;
   }
 
   getHoursBetween(greaterDate, smallerDate) {

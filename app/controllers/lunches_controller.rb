@@ -1,5 +1,5 @@
 class LunchesController < ApplicationController
-  SCHEDULING_DATES = Date.new(2023, 04, 01)
+  SCHEDULING_MONTHS = [3, 6, 9, 12]
 
   def show
     if params[:id]
