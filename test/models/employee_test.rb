@@ -24,4 +24,9 @@ class EmployeeTest < ActiveSupport::TestCase
     @employee.save
     assert_not duplicate_user.valid?
   end
+
+  test 'displayable attributes' do
+    hash = {"name"=>nil, "first_name"=>nil, "last_name"=>nil, "username"=>"ava", "bio"=>nil, "email"=>"ava@ava.com"}
+    assert_equal hash, @employee.displayable_attributes
+  end
 end
