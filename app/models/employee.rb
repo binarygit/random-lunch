@@ -1,4 +1,7 @@
 class Employee < ApplicationRecord
+  has_many :lunch_appointments, foreign_key: :lunch_participant_id
+  has_many :lunches, through: :lunch_appointments
+
   has_secure_password
   validates :email, presence: true, uniqueness: true
   validates :username, presence: true, uniqueness: true
