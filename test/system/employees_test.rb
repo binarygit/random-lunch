@@ -33,6 +33,6 @@ class EmployeesTest < ApplicationSystemTestCase
     visit login_url
     fill_in "Email", with: employee.email
     fill_in "Password", with: "foobarfoobar"
-    click_on [ "Login", "form button" ]
+    click_button "Login"
   end
 end
