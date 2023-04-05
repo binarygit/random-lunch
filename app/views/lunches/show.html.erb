@@ -1,5 +1,6 @@
 <div class="container-lg paper">
-  <% if @upcoming_lunch %>
+  <% if @lunch&.upcoming? %>
+    <%= render "upcoming_lunch" %>
   <% else %>
     <%= render "no_upcoming_lunch" %>
   <% end %>
