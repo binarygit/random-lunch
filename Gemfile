@@ -74,3 +74,4 @@ end
 gem 'rails-controller-testing'
 gem "view_component"
 gem 'nokogiri'
+gem 'faker'
