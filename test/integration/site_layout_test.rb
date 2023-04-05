@@ -41,6 +41,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', 'https://rubyonrails.org/'
 
     # test layout in upcoming lunch page
+    Lunch.destroy_all
     get upcoming_lunch_path
     assert_select '#no-upcoming-lunch'
     assert_select '#meme-container'
