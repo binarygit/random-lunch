@@ -1,19 +1,21 @@
-<main id="no-upcoming-lunch">
+<main id="upcoming-lunch">
   <div class="row">
     <div class="col-6 col">
       <p class="larger-text">
-      Sorry, but it seems that no lunches are scheduled
-      at this time.
+      WUBBA LUBBA DUB DUB !!!
+      <%= image_tag "rick" %>
       </p>
-      <p class="larger-text">
-        The next scheduling will take place on:
-        <u class="full-date"><%= get_next_scheduling_date.strftime('%b, %d, %Y') %></u>
+      <p class="larger-text lunch-date-container neon-text">
+        There's a lunch scheduled for **drumroll**
+        <br>
+        <br>
+        <%= get_next_scheduling_date.strftime('%b, %d, %Y') %>
       </p>
     </div>
 
     <aside class="col-6 col">
       <div id="meme-container">
-        <%= image_tag random_meme_filename %>
+        <%= image_tag 'pizza' %>
       </div>
     </aside>
   </div>
@@ -22,5 +24,6 @@
        data-countdown-timer-upcoming-date-timestamp-value="<%= unix_timestamp_of(get_next_scheduling_date) %>"
        data-countdown-timer-tomorrow-date-timestamp-value="<%= unix_timestamp_of(Date.tomorrow) %>">
        <p id="countdown-timer" class="countdown-timer" data-countdown-timer-target="timerDisplayer"></p>
+       <a href="">Click here for full info.</a>
   </div>
 </main>

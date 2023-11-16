@@ -20,7 +20,7 @@ export default class extends Controller {
       let tomorrowDate = new Date(this.tomorrowDateTimestampValue);
 
       this.timerDisplayerTarget.textContent = `
-      It is ${this.getDaysBetween(countDownToDate, this.currentTime)} days, 
+      Next lunch is ${this.getDaysBetween(countDownToDate, this.currentTime)} days, 
             ${this.getHoursBetween(tomorrowDate, this.currentTime)} hours, 
             ${this.getMinutesBetween(
               this.getNextHour(),
